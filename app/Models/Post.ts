@@ -1,5 +1,5 @@
-import { DateTime } from 'luxon'
 import { BaseModel, BelongsTo, belongsTo, column } from '@ioc:Adonis/Lucid/Orm'
+import { DateTime } from 'luxon'
 import User from './User'
 
 export default class Post extends BaseModel {
@@ -16,5 +16,5 @@ export default class Post extends BaseModel {
   public createdById: number
 
   @belongsTo(() => User)
-  public user: BelongsTo<typeof User>
+  public createdBy: BelongsTo<typeof User>
 }
